@@ -1,5 +1,5 @@
 
-# AnimeFlix — Anime Search App (YoPrint Assignment)
+# AnimeFlix — Anime Search App
 
 Netflix‑style Anime search built with **React 18 + TypeScript + Redux Toolkit (RTK Query) + Vite + Tailwind** using the free **Jikan v4** API.
 

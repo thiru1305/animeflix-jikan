@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Base: clamp page-wide overflow & keep full height --- */
+@layer base {
+  html, body { overflow-x: hidden; }      /* kill horizontal bar globally */
+  html, body, #root { height: 100%; }     /* optional but handy for layouts */
+
+}
+
+/* Fallback for browsers without scrollbar-gutter (older Safari):
+   always allocate the vertical scrollbar track */
+@supports not (scrollbar-gutter: stable) {
+  html { overflow-y: scroll; }
+}
+
+/* --- Utilities: opt-in scrollbar hiding --- */
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar { width: 0; height: 0; display: none; }
+  .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+  /* optional helper if you want to clamp any single container */
+  .page-no-x-scroll { overflow-x: hidden; }
+}
